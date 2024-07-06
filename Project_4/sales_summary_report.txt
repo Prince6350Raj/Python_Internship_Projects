@@ -1,0 +1,28 @@
+
+Sales Data Analysis
+===================
+
+Total Sales and Quantity by Product:
+           Sales  Quantity
+Product                   
+Product A   4600        46
+Product B   6600        66
+Product C   8600        86
+
+Total Sales and Quantity by Region:
+        Sales  Quantity
+Region                 
+East     5000        50
+North    4800        48
+South    4900        49
+West     5100        51
+
+Monthly Sales Trends:
+            Sales
+Date             
+2024-01-31  19800
+
+Average Sales and Quantity:
+Sales       1650.0
+Quantity      16.5
+dtype: float64
