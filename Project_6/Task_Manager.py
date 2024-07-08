@@ -2,10 +2,8 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 
-# Initialize empty DataFrame to store tasks
 tasks = pd.DataFrame(columns=['Task', 'Deadline', 'Priority', 'Status'])
 
-# Function to add a task
 def add_task():
     global tasks
     task = input("Enter the task: ")
@@ -15,7 +13,6 @@ def add_task():
     tasks = pd.concat([tasks, new_task], ignore_index=True)
     print("Task added successfully!")
 
-# Function to complete a task
 def complete_task():
     global tasks
     task_to_complete = input("Enter the task to mark as complete: ")
@@ -25,7 +22,6 @@ def complete_task():
     else:
         print("Task not found.")
 
-# Function to view tasks
 def view_tasks():
     global tasks
     if tasks.empty:
@@ -34,7 +30,6 @@ def view_tasks():
         print("\nAll Tasks:")
         print(tasks.to_string(index=False))
 
-# Function to view pending tasks
 def view_pending_tasks():
     global tasks
     if tasks.empty:
@@ -47,7 +42,6 @@ def view_pending_tasks():
             print("\nPending Tasks:")
             print(pending_tasks.to_string(index=False))
 
-# Function to prioritize tasks
 def prioritize_tasks():
     global tasks
     if tasks.empty:
@@ -57,7 +51,6 @@ def prioritize_tasks():
         tasks.sort_values(by=['Priority', 'Deadline'], ascending=[True, True], inplace=True)
         print("Tasks prioritized successfully!")
 
-# Main menu
 def main_menu():
     while True:
         print("\nTask Manager Menu")
@@ -85,6 +78,4 @@ def main_menu():
             break
         else:
             print("Invalid choice. Please enter a number between 1 and 6.")
-
-# Run the main menu
 main_menu()
